@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive portfolio of José Rizal, the national hero of the Philippines">
     <title>José Rizal - National Hero of the Philippines</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,8 +15,8 @@
     <div class="container">
         <header class="header">
             <div class="header-left">
-                <i class="fas fa-book-open logo-icon"></i>
-                <nav class="nav">
+                <i class="fas fa-book-open logo-icon" aria-hidden="true"></i>
+                <nav class="nav" id="main-nav">
                     <a href="index.html" class="active">Rizal Portfolio</a>
                     <a href="student.html">Student Info</a>
                     <a href="#biography">Biography</a>
@@ -24,12 +25,18 @@
                     <a href="#legacy">Legacy</a>
                     <a href="#gallery">Gallery</a>
                 </nav>
+                <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="main-nav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
             <div class="header-right">
-                <button class="btn btn-sm" id="theme-toggle">
+                <button class="btn btn-sm" id="theme-toggle" aria-label="Toggle dark mode">
                     <i class="fas fa-moon"></i>
                 </button>
             </div>
+            <div class="overlay" id="overlay"></div>
         </header>
 
         <main class="main-content">
@@ -37,32 +44,32 @@
                 <div class="hero-text">
                     <h1>"The youth is the hope of our future."</h1>
                     <p class="hero-quote">- José Rizal</p>
-                    <a href="#biography" class="btn btn-hero">Explore His Life <i class="fas fa-arrow-down"></i></a>
+                    <a href="#biography" class="btn btn-hero">Explore His Life <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
                 </div>
             </section>
 
             <section class="profile-section">
                 <div class="profile-header">
-                    <img src="images/jose.jpg" alt="José Rizal" class="profile-img">
+                    <img src="images/jose.jpg" alt="José Rizal" class="profile-img" loading="lazy">
                     <div class="profile-info">
                         <h1>José Protasio Rizal Mercado y Alonso Realonda</h1>
                         <p class="profile-bio">National Hero of the Philippines | Novelist | Ophthalmologist | Polyglot | Reformer</p>
                         <div class="profile-stats">
-                            <span><i class="fas fa-calendar"></i> June 19, 1861 - December 30, 1896</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Calamba, Laguna, Philippines</span>
-                            <span><i class="fas fa-language"></i> Fluent in 22 languages</span>
+                            <span><i class="fas fa-calendar" aria-hidden="true"></i> June 19, 1861 - December 30, 1896</span>
+                            <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Calamba, Laguna, Philippines</span>
+                            <span><i class="fas fa-language" aria-hidden="true"></i> Fluent in 22 languages</span>
                         </div>
                         <div class="profile-links">
-                            <a href="#biography" class="btn"><i class="fas fa-user"></i> Biography</a>
-                            <a href="#works" class="btn btn-outline"><i class="fas fa-book"></i> Literary Works</a>
-                            <a href="#gallery" class="btn btn-outline"><i class="fas fa-images"></i> Gallery</a>
+                            <a href="#biography" class="btn"><i class="fas fa-user" aria-hidden="true"></i> Biography</a>
+                            <a href="#works" class="btn btn-outline"><i class="fas fa-book" aria-hidden="true"></i> Literary Works</a>
+                            <a href="#gallery" class="btn btn-outline"><i class="fas fa-images" aria-hidden="true"></i> Gallery</a>
                         </div>
                     </div>
                 </div>
             </section>
 
             <section class="content-section" id="biography">
-                <h2><i class="fas fa-user-graduate"></i> Biography</h2>
+                <h2><i class="fas fa-user-graduate" aria-hidden="true"></i> Biography</h2>
                 <div class="section-intro">
                     <p>José Rizal was a Filipino nationalist, novelist, and key member of the Filipino Propaganda Movement which advocated political reforms for the colony under Spain. He was executed by the Spanish colonial government for rebellion, and is considered a national hero of the Philippines.</p>
                 </div>
@@ -127,68 +134,68 @@
             </section>
 
             <section class="content-section" id="works">
-                <h2><i class="fas fa-book"></i> Literary Works</h2>
+                <h2><i class="fas fa-book" aria-hidden="true"></i> Literary Works</h2>
                 <div class="section-intro">
                     <p>Rizal's literary works played a crucial role in awakening Filipino nationalism. His writings exposed the abuses of the Spanish colonial government and clergy while advocating for peaceful reforms and education.</p>
                 </div>
                 <div class="repo-grid">
                     <div class="repo-card">
-                        <div class="repo-icon"><i class="fas fa-book-open"></i></div>
+                        <div class="repo-icon"><i class="fas fa-book-open" aria-hidden="true"></i></div>
                         <h3>Noli Me Tangere (1887)</h3>
                         <p>A scathing indictment of Spanish colonial rule and the Catholic Church's abuses in the Philippines. The novel follows the story of Crisostomo Ibarra and his love for Maria Clara against the backdrop of a corrupt society.</p>
                         <div class="repo-stats">
-                            <span><i class="fas fa-star"></i> Social Novel</span>
-                            <span><i class="fas fa-code-branch"></i> 63 Chapters</span>
+                            <span><i class="fas fa-star" aria-hidden="true"></i> Social Novel</span>
+                            <span><i class="fas fa-code-branch" aria-hidden="true"></i> 63 Chapters</span>
                         </div>
                         <a href="#" class="btn btn-sm btn-outline">Read Excerpt</a>
                     </div>
                     <div class="repo-card">
-                        <div class="repo-icon"><i class="fas fa-fire"></i></div>
+                        <div class="repo-icon"><i class="fas fa-fire" aria-hidden="true"></i></div>
                         <h3>El Filibusterismo (1891)</h3>
                         <p>The sequel to Noli Me Tangere, presenting a more revolutionary approach through the character of Simoun, a wealthy jeweler plotting to overthrow the corrupt system through violent means.</p>
                         <div class="repo-stats">
-                            <span><i class="fas fa-star"></i> Political Novel</span>
-                            <span><i class="fas fa-code-branch"></i> 38 Chapters</span>
+                            <span><i class="fas fa-star" aria-hidden="true"></i> Political Novel</span>
+                            <span><i class="fas fa-code-branch" aria-hidden="true"></i> 38 Chapters</span>
                         </div>
                         <a href="#" class="btn btn-sm btn-outline">Read Excerpt</a>
                     </div>
                     <div class="repo-card">
-                        <div class="repo-icon"><i class="fas fa-pen-fancy"></i></div>
+                        <div class="repo-icon"><i class="fas fa-pen-fancy" aria-hidden="true"></i></div>
                         <h3>Mi Último Adiós (1896)</h3>
                         <p>Written on the eve of his execution, this 14-stanza poem expresses his love for his country and his acceptance of death. Originally untitled, it was later given the title "Mi Ultimo Pensamiento" by his sister.</p>
                         <div class="repo-stats">
-                            <span><i class="fas fa-star"></i> Last Poem</span>
-                            <span><i class="fas fa-code-branch"></i> 14 Stanzas</span>
+                            <span><i class="fas fa-star" aria-hidden="true"></i> Last Poem</span>
+                            <span><i class="fas fa-code-branch" aria-hidden="true"></i> 14 Stanzas</span>
                         </div>
                         <a href="#" class="btn btn-sm btn-outline">Read Poem</a>
                     </div>
                     <div class="repo-card">
-                        <div class="repo-icon"><i class="fas fa-users"></i></div>
+                        <div class="repo-icon"><i class="fas fa-users" aria-hidden="true"></i></div>
                         <h3>To the Filipino Youth (1879)</h3>
                         <p>Written when Rizal was just 18, this poem won first prize in a literary contest. It encourages the Filipino youth to reach their potential and serve their country, calling them the "fair hope of the fatherland."</p>
                         <div class="repo-stats">
-                            <span><i class="fas fa-star"></i> Inspirational</span>
-                            <span><i class="fas fa-code-branch"></i> Didactic</span>
+                            <span><i class="fas fa-star" aria-hidden="true"></i> Inspirational</span>
+                            <span><i class="fas fa-code-branch" aria-hidden="true"></i> Didactic</span>
                         </div>
                         <a href="#" class="btn btn-sm btn-outline">Read Poem</a>
                     </div>
                     <div class="repo-card">
-                        <div class="repo-icon"><i class="fas fa-eye"></i></div>
+                        <div class="repo-icon"><i class="fas fa-eye" aria-hidden="true"></i></div>
                         <h3>The Vision of Fr. Rodriguez</h3>
                         <p>A satirical piece criticizing the hypocrisy of the friars. Written under the pen name Dimas Alang, it showcases Rizal's skill in satire and political commentary.</p>
                         <div class="repo-stats">
-                            <span><i class="fas fa-star"></i> Satire</span>
-                            <span><i class="fas fa-code-branch"></i> Political</span>
+                            <span><i class="fas fa-star" aria-hidden="true"></i> Satire</span>
+                            <span><i class="fas fa-code-branch" aria-hidden="true"></i> Political</span>
                         </div>
                         <a href="#" class="btn btn-sm btn-outline">Read Excerpt</a>
                     </div>
                     <div class="repo-card">
-                        <div class="repo-icon"><i class="fas fa-globe-europe"></i></div>
+                        <div class="repo-icon"><i class="fas fa-globe-europe" aria-hidden="true"></i></div>
                         <h3>Letters from Brussels</h3>
                         <p>A collection of correspondence where Rizal shared his observations about European society and compared it with conditions in the Philippines, revealing his nationalist and reformist ideas.</p>
                         <div class="repo-stats">
-                            <span><i class="fas fa-star"></i> Correspondence</span>
-                            <span><i class="fas fa-code-branch"></i> Political Analysis</span>
+                            <span><i class="fas fa-star" aria-hidden="true"></i> Correspondence</span>
+                            <span><i class="fas fa-code-branch" aria-hidden="true"></i> Political Analysis</span>
                         </div>
                         <a href="#" class="btn btn-sm btn-outline">Read Letters</a>
                     </div>
@@ -196,13 +203,13 @@
             </section>
 
             <section class="content-section" id="travels">
-                <h2><i class="fas fa-passport"></i> Travels Abroad</h2>
+                <h2><i class="fas fa-passport" aria-hidden="true"></i> Travels Abroad</h2>
                 <div class="section-intro">
                     <p>Rizal's travels across Europe, Asia, and America significantly influenced his ideas and writings. He visited numerous countries, studying their cultures, politics, and societies while advocating for Philippine reforms.</p>
                 </div>
                 <div class="travel-grid">
                     <div class="travel-card">
-                        <div class="travel-map" style="background-image: url('images/spain-map.jpg');"></div>
+                        <div class="travel-map" style="background-image: url('images/spain-map.jpg');" aria-label="Map of Spain"></div>
                         <div class="travel-content">
                             <h3>Spain (1882-1885)</h3>
                             <ul>
@@ -214,7 +221,7 @@
                         </div>
                     </div>
                     <div class="travel-card">
-                        <div class="travel-map" style="background-image: url('images/france-map.jpg');"></div>
+                        <div class="travel-map" style="background-image: url('images/france-map.jpg');" aria-label="Map of France"></div>
                         <div class="travel-content">
                             <h3>France (1885-1886)</h3>
                             <ul>
@@ -226,7 +233,7 @@
                         </div>
                     </div>
                     <div class="travel-card">
-                        <div class="travel-map" style="background-image: url('images/germany-map.jpg');"></div>
+                        <div class="travel-map" style="background-image: url('images/germany-map.jpg');" aria-label="Map of Germany"></div>
                         <div class="travel-content">
                             <h3>Germany (1886-1887)</h3>
                             <ul>
@@ -238,7 +245,7 @@
                         </div>
                     </div>
                     <div class="travel-card">
-                        <div class="travel-map" style="background-image: url('images/asia-map.jpg');"></div>
+                        <div class="travel-map" style="background-image: url('images/asia-map.jpg');" aria-label="Map of Asia"></div>
                         <div class="travel-content">
                             <h3>Asia (1888-1892)</h3>
                             <ul>
@@ -253,98 +260,99 @@
             </section>
 
             <section class="content-section" id="legacy">
-                <h2><i class="fas fa-monument"></i> Legacy</h2>
+                <h2><i class="fas fa-monument" aria-hidden="true"></i> Legacy</h2>
                 <div class="section-intro">
                     <p>Rizal's martyrdom and intellectual contributions made him the symbol of Philippine nationalism. His ideals continue to inspire Filipinos and people around the world fighting for justice and freedom.</p>
                 </div>
                 <div class="legacy-grid">
                     <div class="legacy-card">
-                        <i class="fas fa-landmark"></i>
+                        <i class="fas fa-landmark" aria-hidden="true"></i>
                         <h3>National Hero</h3>
                         <p>Officially declared the national hero of the Philippines through Republic Act No. 1425 (Rizal Law) for his peaceful reform advocacy and martyrdom.</p>
-                        <a href="https://en.wikipedia.org/wiki/National_hero_of_the_Philippines" class="btn btn-sm">Learn More</a>
+                        <a href="https://en.wikipedia.org/wiki/National_hero_of_the_Philippines" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Learn More</a>
                     </div>
                     <div class="legacy-card">
-                        <i class="fas fa-school"></i>
+                        <i class="fas fa-school" aria-hidden="true"></i>
                         <h3>Rizal Day</h3>
                         <p>December 30, the anniversary of his execution, is commemorated as Rizal Day, a national holiday in the Philippines marked by ceremonies at Rizal Park.</p>
-                        <a href="https://nhcp.gov.ph/why-we-celebrate-rizal-day-every-30th-day-of-december/#:~:text=This%20is%20to%20commemorate%20the%20nationalism%20and%20martyrdom,and%20Zamboanga%20and%20Rizal%20Monument%20in%20Baguio%20City." class="btn btn-sm">Learn More</a>
+                        <a href="https://nhcp.gov.ph/why-we-celebrate-rizal-day-every-30th-day-of-december/#:~:text=This%20is%20to%20commemorate%20the%20nationalism%20and%20martyrdom,and%20Zamboanga%20and%20Rizal%20Monument%20in%20Baguio%20City." class="btn btn-sm" target="_blank" rel="noopener noreferrer">Learn More</a>
                     </div>
                     <div class="legacy-card">
-                        <i class="fas fa-book-reader"></i>
+                        <i class="fas fa-book-reader" aria-hidden="true"></i>
                         <h3>Rizal Law</h3>
                         <p>Republic Act 1425 mandates the study of Rizal's life and works in all Philippine schools to instill patriotism and national identity among students.</p>
-                        <a href="https://lawphil.net/statutes/repacts/ra1956/ra_1425_1956.html#:~:text=Courses%20on%20the%20life%2C%20works%20and%20writings%20of,English%20translation%20shall%20be%20used%20as%20basic%20texts." class="btn btn-sm">Learn More</a>
+                        <a href="https://lawphil.net/statutes/repacts/ra1956/ra_1425_1956.html#:~:text=Courses%20on%20the%20life%2C%20works%20and%20writings%20of,English%20translation%20shall%20be%20used%20as%20basic%20texts." class="btn btn-sm" target="_blank" rel="noopener noreferrer">Learn More</a>
                     </div>
                     <div class="legacy-card">
-                        <i class="fas fa-globe-asia"></i>
+                        <i class="fas fa-globe-asia" aria-hidden="true"></i>
                         <h3>International Recognition</h3>
                         <p>Recognized worldwide as a symbol of peaceful reform. Monuments honoring Rizal exist in Spain, Germany, USA, China, Japan, and other countries.</p>
-                        <a href="https://lifestyle.inquirer.net/248798/monuments-memorials-jose-rizal-around-world/" class="btn btn-sm">Learn More</a>
+                        <a href="https://lifestyle.inquirer.net/248798/monuments-memorials-jose-rizal-around-world/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Learn More</a>
                     </div>
                     <div class="legacy-card">
-                        <i class="fas fa-university"></i>
+                        <i class="fas fa-university" aria-hidden="true"></i>
                         <h3>Educational Institutions</h3>
                         <p>Numerous schools, universities, and scholarships bear his name, including the prestigious Rizal High School and Rizal Technological University.</p>
-                        <a href="https://www.rtu.edu.ph/about/" class="btn btn-sm">Learn More</a>
+                        <a href="https://www.rtu.edu.ph/about/" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Learn More</a>
                     </div>
                     <div class="legacy-card">
-                        <i class="fas fa-coins"></i>
+                        <i class="fas fa-coins" aria-hidden="true"></i>
                         <h3>Currency and Stamps</h3>
                         <p>Featured on Philippine peso bills and coins, as well as postage stamps, cementing his status as the foremost national hero.</p>
-                        <a href="https://www.bsp.gov.ph/Pages/CoinsAndNotes/Coins/NewGenerationCurrencyCoinSeries.aspx" class="btn btn-sm">Learn More</a>
+                        <a href="https://www.bsp.gov.ph/Pages/CoinsAndNotes/Coins/NewGenerationCurrencyCoinSeries.aspx" class="btn btn-sm" target="_blank" rel="noopener noreferrer">Learn More</a>
                     </div>
                 </div>
             </section>
-<section class="content-section" id="gallery">
-    <h2><i class="fas fa-images"></i> Gallery</h2>
-    <div class="section-intro">
-        <p>Explore visual representations of Rizal's life, works, and memorials through these historical images and contemporary depictions.</p>
-    </div>
-    <div class="gallery-container">
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <div class="gallery-image-container">
-                    <img src="images/rizal-young.png" alt="Young José Rizal" loading="lazy" class="gallery-img">
+
+            <section class="content-section" id="gallery">
+                <h2><i class="fas fa-images" aria-hidden="true"></i> Gallery</h2>
+                <div class="section-intro">
+                    <p>Explore visual representations of Rizal's life, works, and memorials through these historical images and contemporary depictions.</p>
                 </div>
-                <div class="gallery-caption">Young José Rizal</div>
-            </div>
-            <div class="gallery-item">
-                <div class="gallery-image-container">
-                    <img src="images/rizal-europe.jpg" alt="Rizal in Europe" loading="lazy" class="gallery-img">
+                <div class="gallery-container">
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <div class="gallery-image-container">
+                                <img src="images/rizal-young.png" alt="Young José Rizal" loading="lazy" class="gallery-img">
+                            </div>
+                            <div class="gallery-caption">Young José Rizal</div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-image-container">
+                                <img src="images/rizal-europe.jpg" alt="Rizal in Europe" loading="lazy" class="gallery-img">
+                            </div>
+                            <div class="gallery-caption">Rizal during his European years</div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-image-container">
+                                <img src="images/noli-cover.jpg" alt="Original Noli Me Tangere cover" loading="lazy" class="gallery-img">
+                            </div>
+                            <div class="gallery-caption">Original Noli Me Tangere cover</div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-image-container">
+                                <img src="images/rizal-dapitan.jpg" alt="Rizal in Dapitan" loading="lazy" class="gallery-img">
+                            </div>
+                            <div class="gallery-caption">Rizal during his exile in Dapitan</div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-image-container">
+                                <img src="images/rizal-park.jpg" alt="Rizal Park" loading="lazy" class="gallery-img">
+                            </div>
+                            <div class="gallery-caption">Rizal Monument at Luneta Park</div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-image-container">
+                                <img src="images/rizal-shrine.jpg" alt="Rizal Shrine" loading="lazy" class="gallery-img">
+                            </div>
+                            <div class="gallery-caption">Rizal Shrine in Calamba</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="gallery-caption">Rizal during his European years</div>
-            </div>
-            <div class="gallery-item">
-                <div class="gallery-image-container">
-                    <img src="images/noli-cover.jpg" alt="Original Noli Me Tangere cover" loading="lazy" class="gallery-img">
-                </div>
-                <div class="gallery-caption">Original Noli Me Tangere cover</div>
-            </div>
-            <div class="gallery-item">
-                <div class="gallery-image-container">
-                    <img src="images/rizal-dapitan.jpg" alt="Rizal in Dapitan" loading="lazy" class="gallery-img">
-                </div>
-                <div class="gallery-caption">Rizal during his exile in Dapitan</div>
-            </div>
-            <div class="gallery-item">
-                <div class="gallery-image-container">
-                    <img src="images/rizal-park.jpg" alt="Rizal Park" loading="lazy" class="gallery-img">
-                </div>
-                <div class="gallery-caption">Rizal Monument at Luneta Park</div>
-            </div>
-            <div class="gallery-item">
-                <div class="gallery-image-container">
-                    <img src="images/rizal-shrine.jpg" alt="Rizal Shrine" loading="lazy" class="gallery-img">
-                </div>
-                <div class="gallery-caption">Rizal Shrine in Calamba</div>
-            </div>
-        </div>
-    </div>
-</section>
+            </section>
 
             <section class="content-section quotes-section">
-                <h2><i class="fas fa-quote-left"></i> Famous Quotes</h2>
+                <h2><i class="fas fa-quote-left" aria-hidden="true"></i> Famous Quotes</h2>
                 <div class="quotes-grid">
                     <div class="quote-card">
                         <div class="quote-text">"He who does not know how to look back at where he came from will never get to his destination."</div>
@@ -381,17 +389,16 @@
                 <div class="footer-social">
                     <h3>Connect</h3>
                     <div class="social-links">
-                        <a href="https://github.com/Geopy2004" target="_blank"><i class="fab fa-github"></i></a>    
-                        <a href="https://web.facebook.com/Geopy.69" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://github.com/Geopy2004" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>    
+                        <a href="https://web.facebook.com/Geopy.69" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>© 2023 José Rizal Educational Portfolio. All rights reserved.</p>
-                <p>Created with <i class="fas fa-heart"></i> by Algeo L. Fernandez</p>
             </div>
         </footer>
     </div>

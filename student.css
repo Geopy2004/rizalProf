@@ -1,0 +1,202 @@
+/* Student Page Specific Styles */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border-left: 4px solid var(--secondary-color);
+}
+
+.info-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    background-color: rgba(3, 102, 214, 0.05);
+}
+
+.info-label {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 0.95rem;
+}
+
+.info-value {
+    color: var(--text-color);
+    text-align: right;
+    font-size: 0.9rem;
+    padding-left: 1rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.skills-card {
+    padding: 1.75rem;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border-top: 3px solid var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.skills-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.skills-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(3, 102, 214, 0.1) 0%, transparent 100%);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.skills-card:hover::before {
+    opacity: 1;
+}
+
+.skills-icon {
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.25rem;
+    transition: var(--transition);
+}
+
+.skills-card:hover .skills-icon {
+    transform: scale(1.1);
+}
+
+.skills-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.25rem;
+    color: var(--secondary-color);
+    position: relative;
+    display: inline-block;
+}
+
+.skills-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+.skills-card:hover h3::after {
+    width: 60px;
+}
+
+.skills-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skills-card li {
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 2rem;
+    line-height: 1.6;
+}
+
+.skills-card li::before {
+    content: '▹';
+    position: absolute;
+    left: 0.5rem;
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+/* Responsive adjustments for student page */
+@media (max-width: 768px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+    
+    .info-value {
+        text-align: left;
+        padding-left: 0;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .skills-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-links {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .profile-links .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .skills-card {
+        padding: 1.25rem;
+    }
+    
+    .skills-card li {
+        padding-left: 1.75rem;
+    }
+}
+
+/* Animation for skills cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skills-card {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.skills-card:nth-child(1) { animation-delay: 0.1s; }
+.skills-card:nth-child(2) { animation-delay: 0.2s; }
+.skills-card:nth-child(3) { animation-delay: 0.3s; }
+.skills-card:nth-child(4) { animation-delay: 0.4s; }
